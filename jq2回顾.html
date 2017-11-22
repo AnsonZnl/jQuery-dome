@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq2.3回顾</title>
+    <script src="../JQuery/jquery-1.11.1.js" type="text/javascript"></script>
+    <script>
+        //查找节点：1.查找元素节点
+        $(document).ready(function(){
+            var a= $("ul li:gt(1):not(:last)");
+            a.hide();
+            $("ul li:last").click(function(){
+                if(a.is(":visible")){
+                    a.hide();
+                    $(this).find("span").text("显示");
+                }else{
+                    a.show();
+                    $(this).find("span").text("隐藏");
+                }
+            })
+        })
+        //查找节点：1.查找属性节点
+        $(document).ready(function(){
+            var a=$("ul li:eq(3)").attr("title");//text是弹出该元素的文本，attr是弹出该元素的属性值
+            alert(a);
+        })
+        //创建节点。插入节点
+        $(document).ready(function(){
+            var b=$("<li>追加到最后（内部）</li>");
+            var a1=$("<li>追加到前面（内部）</li>")
+            var a2=$("<li>追加到后面（外部）</li>")
+            var a3=$("<li>追加到前面（外部）</li>")
+            $("ul").append(b);//追加到最后（内部）p67.同等于$(b).appendTo("ul")
+            $("ul").prepend(a1);//追加到前面（内部）p67.同等于$(a1).prependTo("ul")
+            $("ul").after(a2);//追加到后面（外部）p67.同等于$(a2).inserAfter("ul")
+            $("ul").before(a3);//追加到前面（外部）p67.同等于$(a3).inserBefore("ul")
+        })
+        //删除节点
+        $(document).ready(function(){
+            $("ul li").click(function(){
+                $(this).css("background","red")
+            });
+            var a4= $("ul li:eq(0)").remove();//1.使用remover在此删除AAA.命名var=a4.
+            $(a4).appendTo("ul");//吧删除的AAA追加到尾部.使用remove删去的元素再次被添加后事件不能够使用
+            var a5= $("ul li:eq(1)").detach();//2.使用detach从网页中删除。
+            $(a5).appendTo("ul");//单击事件家背景.detach删去的元素再次被添加插入时事件能继续能用用
+            $("ul li:eq(0)").empty();//3.只移除元素的文本。比如li,使用empty。只删文本不删点
+        })
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+<ul>
+    <li>AAA</li>
+    <li>BBB</li>
+    <li>CCC</li>
+    <li title="444">DDD</li>
+    <li class="le"><span style="cursor:pointer">显示</span></li>
+</ul>
+</body>
+</html>

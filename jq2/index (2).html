@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电器</title>
+    <script src="jquery-1.11.1.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+            var a= $("ul li:gt(5):not(:last)");
+            a.hide();
+            $(".showmre a").click(function(){
+                if(a.is(":visible")){
+                    a.hide();
+                    $(this).find("span").text("显示全部品牌");
+                }else {
+                    a.show();
+                    $(this).find("span").text("显示精简品牌");
+                }
+            })
+        })
+
+    </script>
+    <style>
+        .allBox{
+            width: 600px;
+            margin: 50px auto;
+            font-size: 12px;
+            padding: 20px 20px;
+            border: solid 1px #000000;
+        }
+        ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        li{
+            float: left;
+            width: 200px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+        }
+        .showmre a{
+            display: block;
+            width: 150px;
+            height: 24px;
+           text-align: center;
+            line-height: 24px;
+            margin: 0 auto;
+            border: solid 1px #000;
+            clear: both;
+
+        }
+    </style>
+</head>
+<body>
+<div class="allBox">
+    <ul>
+        <li><a href="#">佳能</a><i>(4511)</i></li>
+        <li><a href="#">索尼</a><i>(4511)</i></li>
+        <li><a href="#">三星</a><i>(4511)</i></li>
+        <li><a href="#">松下</a><i>(4511)</i></li>
+        <li><a href="#">卡西尼</a><i>(4511)</i></li>
+        <li><a href="#">富士康</a><i>(4511)</i></li>
+        <li><a href="#">可达</a><i>(4511)</i></li>
+        <li><a href="#">宾得</a><i>(4511)</i></li>
+        <li><a href="#">理光</a><i>(4511)</i></li>
+        <li><a href="#">奥林巴德</a><i>(4511)</i></li>
+        <li><a href="#">明基</a><i>(4511)</i></li>
+        <li><a href="#">爱国者</a><i>(4511)</i></li>
+        <li><a href="#">格力</a><i>(4511)</i></li>
+        <li><a href="#">其他品牌</a><i>(4511)</i></li>
+    </ul>
+    <div class="showmre">
+        <a href="#"><span>显示全部</span></a>
+    </div>
+</div>
+
+</body>
+</html>

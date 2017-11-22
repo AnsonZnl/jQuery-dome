@@ -1,0 +1,8 @@
+[0328/112711.675:ERROR:process_reader_win.cc(233)] ReadMemory at 0x4884e08 of 32768 bytes failed: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
+[0328/112711.761:WARNING:pe_image_annotations_reader.cc(65)] could not read simple annotations from C:\Program Files (x86)\Google\Chrome\Application\58.0.3000.4\chrome_elf.dll
+[0328/112711.879:ERROR:process_reader_win.cc(233)] ReadMemory at 0x5604e08 of 32768 bytes failed: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
+[0328/112711.879:WARNING:pe_image_annotations_reader.cc(65)] could not read simple annotations from C:\Program Files (x86)\Google\Chrome\Application\58.0.3000.4\chrome_elf.dll
+[0328/112712.302:ERROR:process_reader_win.cc(142)] SuspendThread: 拒绝访问。 (0x5)
+[0328/112712.302:ERROR:exception_snapshot_win.cc(87)] thread ID 1868 not found in process
+[0328/112712.302:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::Initialize failed
+[0328/112712.302:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess: 已尝试访问正在退出的过程。  (0xc000010a)

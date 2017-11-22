@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-1.11.1.js" type="text/javascript"></script>
+    <script>
+        $(function(){
+            $(".diva div").click(function(){
+                //$(this).addClass("fd")////点击换class
+                $(this).toggleClass("fd").siblings("div").removeClass("fd")////重复点击切换class.
+            })
+            $(".btn1").click(function(){
+                var cout=$(".div8").html();//获取他的html的元素.搬家1
+                $(".div9").html(cout);
+                $(".div8").html("")
+            })
+            $(".btn2").click(function(){
+                var cont=$(".div8").html()//8给cont
+                $(".div8").html($(".div9").html())//搬家2.//9给8
+                $(".div9").html(cont)//cont给9
+            })
+            var n=1;
+            $(".btn3").click(function(){
+                if(n==1){
+                    var cont=$(".div8").html();
+                    $(".div9").html(cont);
+                    $(".div8").html("");
+                    n--;
+                }else {
+                    var cont=$(".div9").html();
+                    $(".div8").html(cont);
+                    $(".div9").html("");
+                    n++;
+                }
+            })
+            $(".btn4").click(function(){//   点击选中移入
+                var cont=$(".select1 option:selected");
+                $(".select2").append(cont);
+            })
+            $(".btn5").click(function(){//   全部移入
+                var cont=$(".select1 option");
+                $(".select2").append(cont);
+            })
+            $(".select1 option").dblclick(function(){////   双击选中移入
+                //var cont=(this)//1
+                //$(".select2").append(cont);
+                $(this).appendTo(".select2");//2
+            })
+            $(".select2 option").dblclick(function(){////   双击选中移出
+               // var cont=(this)//y因为双击冲突.暂不实现
+                //$(".select1").append(cont);
+                $(this).appendTo(".select1");//2
+            })
+            $(".text1").keyup(function(){//按下事件.筛选.搜索功能
+                var cont=$(this).val();
+                $("table tr").hide().filter(":contains("+cont+")").show();//缩减:缩减其余的show
+            })
+        });
+    </script>
+    <style>
+        body{
+            height: 2000px;
+        }
+        .diva div{
+            width: 50px;
+            height: 50px;
+            float: left;
+            background: #2B93D2;
+            margin: 20px 20px;
+            cursor: pointer;
+        }
+        div.fd{
+            width: 100px;
+            height: 100px;
+            background: #333333;
+            margin: -15px -15px 0 0;
+            /*放到下面，权重值比较。指定选择器*/
+        }
+        h2{
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .div8,.div9{
+            border:solid #000000 2px;
+            margin-top: 10px;
+            width: 600px;
+            height: 380px;
+            padding: 30px 0 0 40px;
+            float: left;
+            margin-left: 10px;
+            }
+        p input{
+            display: inline-block;
+            text-align: center;
+
+        }
+        hr{
+            width: 100%;
+        }
+        .img2{
+            width: 550px;
+            height: 302px;
+        }
+        select{
+            width: 80px;
+            height: 160px;
+        }
+    </style>
+</head>
+<body>
+    <div class="diva">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+        <div class="div4"></div>
+        <div class="div5"></div>
+        <div class="div6"></div>
+        <div class="div7"></div>
+    </div>
+    <p>
+    <hr>
+    <input type="button" class="btn1" value="搬家一">
+    <input type="button" class="btn2" value="搬家二">
+    <input type="button" class="btn3" value="搬家三">
+    </p>
+    <div class="div8">
+        <h2>这里是蓝buff</h2>
+        <img src="images/1111364YP5.jpg" alt="">
+    </div>
+    <div class="div9">
+        <h2>这里是红buff</h2>
+        <img src="images/a17BkjbtJ.jpg" alt="" class="img2">
+    </div>
+    <hr>
+    <input type="button" class="btn4" value="选中移入">
+    <input type="button" class="btn5" value="全部移入">
+    <hr>
+    <div class="div10">
+        <select name="" id="" class="select1" multiple="multiple">
+            <!--multiple="multiple"多选-->
+            <option value="">选项一</option>
+            <option value="">选项二</option>
+            <option value="">选项三</option>
+            <option value="">选项四</option>
+            <option value="">选项五</option>
+            <option value="">选项六</option>
+            <option value="">选项七</option>
+            <option value="">选项八</option>
+        </select>
+        <select  multiple="multiple" class="select2" ></select>
+    </div>
+<div class="div11">
+    <hr>
+    筛选：<input type="text" class="text1">
+    <table border="1">
+        <tr>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>年龄</td>
+        </tr>
+        <tr>
+            <td>李白</td>
+            <td>男</td>
+            <td>741</td>
+        </tr>
+        <tr>
+            <td>韩信</td>
+            <td>男</td>
+            <td>1628</td>
+        </tr>
+        <tr>
+            <td>貂蝉</td>
+            <td>女</td>
+            <td>1314</td>
+        </tr>
+        <tr>
+            <td>露娜</td>
+            <td>女</td>
+            <td>521</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

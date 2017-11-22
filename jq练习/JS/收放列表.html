@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>收放列表</title>
+    <script src="../JQuery/jquery-1.11.1.js" type="text/javascript"></script>
+    <script>
+       $(function(){
+           var $category = $('ul li:gt(5):not(:last)');
+           $category.hide();
+           var $toggleBth = $('div.showmore>a');
+           $toggleBtn.click(function(){
+               $category.show();
+               $(this).find('span')
+                    .css("background"，"url(img/up.gif) no-repeat 0 0")
+                    .text("精简显示品牌")
+            $('ul li').filter(":contains('佳能')，:contains('尼康')，:contains('奥林巴斯')")
+                    .addClass("prmoted");
+            return false;
+           })
+       })
+    </script>
+</head>
+<body>
+    <div class="SubCategorBox">
+        <ul>
+            <li><a href="#">佳能</a></li>
+            <li><a href="#">索尼</a></li>
+            <li><a href="#">三星</a></li>
+            <li><a href="#">松下</a></li>
+            <li><a href="#">卡西尼</a></li>
+            <li><a href="#">富士康</a></li>
+            <li><a href="#">可达</a></li>
+            <li><a href="#">宾得</a></li>
+            <li><a href="#">理光</a></li>
+            <li><a href="#">奥林巴德</a></li>
+            <li><a href="#">明基</a></li>
+            <li><a href="#">爱国者</a></li>
+            <li><a href="#">格力</a></li>
+            <li><a href="#">其他品牌</a></li>
+        </ul>
+        <div class="showmre">
+            <a href="more.html"><span>显示全部</span></a>
+        </div>
+    </div>
+</body>
+</html>

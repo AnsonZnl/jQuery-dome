@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="jquery.jqzoom.js" type="text/javascript"></script>
+    <script src="index.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/jqzoom.css">
+    <link rel="stylesheet" href="css/skin/skin_0.css" id="cssFile">
+    <!--<script>-->
+        <!--$(function(){-->
+            <!--$("#skin li").click(function(){-->
+                <!--var n=$(this).index();-->
+                <!--//取li的索引。赋给n-->
+                <!--$(this).addClass("selected").siblings("li").removeClass();-->
+                <!--//追加样式.selected（背景图片定位）给.然后兄弟节点清除当前使用过的样式selected-->
+                <!--$("#cssFile").attr("href","css/skin/skin_"+n+".css")-->
+                <!--//找到cssFile的属性href。改变他的路径（href），然后匹配索引，-->
+            <!--})-->
+            <!--$("nav ul li").hover(function(){-->
+                <!--$(this).find("ul").stop().slideDown(1000);//下来-->
+            <!--},function(){-->
+                <!--$(this).find("ul").stop().slideUp(1000);//上来-->
+            <!--})-->
+            <!--var n=0;//变量-->
+            <!--function run(){-->
+                <!--n++;-->
+                <!--n=(n==5)?0:n;// 三元表达式 如果n=5.那么n=0.如果n=n.则n=n-->
+<!--//              if(n==5){//如果n=5-->
+<!--//                  n=0;-->
+<!--//              }-->
+                <!--$("#mc1 li").eq(n).fadeIn(1000).siblings("li").fadeOut(1000); //fadeIn显示，fadeOut隐藏-->
+                <!--$("#mc2 li").eq(n).css({"background":"red"}).siblings("li").css({"background":"#4a4a4a"});-->
+            <!--}-->
+            <!--var timer= setInterval(run,3000);//替换时间。-->
+            <!--$("#mc2 li").mouseenter(function(){//鼠标移入事件-->
+                        <!--clearInterval(timer);//停止替换-->
+                        <!--var i=$(this).index();//取出当前li的索引-->
+<!--//                alert(i);//弹出-->
+                        <!--$("#mc1 li").eq(i).fadeIn(1000).siblings("li").fadeOut(1000)//让鼠标移入当前的li显示对应的img.兄弟节点隐藏(淡出)-->
+<!--//                        $("#mc2 li").eq(i).css({"background":"red"}).siblings("li").css({"background":"#000"});-->
+                        <!--$(this).css({"background":"red"}).siblings("li").css({"background":"#4a4a4a"});-->
+                        <!--//找到第.eq(i).li、当前i变成红色。兄弟节点其余变成黑色、-->
+                    <!--})-->
+                    <!--.mouseleave(function(){-->
+                        <!--timer=setInterval(run,3000);-->
+                    <!--})//鼠标移除继续轮播-->
+
+                  <!---->
+                  <!--$(".jqzoom").jqueryzoom({-->
+                	 <!--xzoom:310,-->
+               		 <!--yzoom:310,-->
+            <!--});-->
+        <!--$(".mc4 a:eq(0)").hover(function(){-->
+            <!--$(this).css("background","#6a86b6").siblings("a").css("background","#fff")-->
+            <!--$(".mc4 span:eq(0)").show().siblings("span").hide();-->
+        <!--},function(){-->
+        <!--});$(".mc4 a:eq(1)").hover(function(){-->
+            <!--$(this).css("background","#6a86b6").siblings("a").css("background","#fff")-->
+            <!--$(".mc4 span:eq(1)").show().siblings("span").hide();-->
+        <!--},function(){-->
+        <!--});$(".mc4 a:eq(2)").hover(function(){-->
+            <!--$(this).css("background","#6a86b6").siblings("a").css("background","#fff")-->
+            <!--$(".mc4 span:eq(2)").show().siblings("span").hide();-->
+        <!--},function(){-->
+        <!--})-->
+            <!--$(".mc2").click(function(){-->
+             <!--$(".jqzoom img").attr("src","images/pro_img/blue_two_small.jpg")-->
+             <!--$(".jqzoom img").attr("jqimg","images/pro_img/blue_two_big.jpg")-->
+         <!--});$(".mc1").click(function(){-->
+             <!--$(".jqzoom img").attr("src","images/pro_img/blue_one_small.jpg")-->
+             <!--$(".jqzoom img").attr("jqimg","images/pro_img/blue_one_big.jpg")-->
+         <!--});$(".mc3").click(function(){-->
+             <!--$(".jqzoom img").attr("src","images/pro_img/blue_three_small.jpg")-->
+             <!--$(".jqzoom img").attr("jqimg","images/pro_img/blue_three_big.jpg")-->
+         <!--})-->
+            <!--$(".huang").click(function(){-->
+                <!--$(".mc1 img").attr("src","images/pro_img/green_one.jpg")-->
+                <!--$(".mc2 img").attr("src","images/pro_img/green_two.jpg")-->
+                <!--$(".mc3 img").attr("src","images/hot.gif")-->
+                <!--$(".jqzoom img").attr("src","images/pro_img/green_one_small.jpg")-->
+                <!--$(".jqzoom img").attr("jqimg","images/pro_img/green_one_big.jpg")-->
+            <!--})-->
+            <!--$(".qing").click(function(){-->
+                <!--$(".mc1 img").attr("src","images/pro_img/yellow_one.jpg")-->
+                <!--$(".mc2 img").attr("src","images/pro_img/yellow_two.jpg")-->
+                <!--$(".mc3 img").attr("src","images/pro_img/yellow_three.jpg")-->
+                <!--$(".jqzoom img").attr("src","images/pro_img/yellow_one_small.jpg")-->
+                <!--$(".jqzoom img").attr("jqimg","images/pro_img/yellow_one_big.jpg")-->
+            <!--})-->
+            <!--$(".lan").click(function(){-->
+                <!--$(".mc1 img").attr("src","images/pro_img/blue_one.jpg")-->
+                <!--$(".mc2 img").attr("src","images/pro_img/blue_three.jpg")-->
+                <!--$(".mc3 img").attr("src","images/pro_img/blue_two.jpg")-->
+                <!--$(".jqzoom img").attr("src","images/pro_img/blue_one_small.jpg")-->
+                <!--$(".jqzoom img").attr("jqimg","images/pro_img/blue_one_big.jpg")-->
+            <!--})-->
+            <!--$(".chicun:eq(0)").click(function(){-->
+                <!--$(".wei").html("S")-->
+            <!--});$(".chicun:eq(1)").click(function(){-->
+                <!--$(".wei").html("L")-->
+            <!--});$(".chicun:eq(2)").click(function(){-->
+                <!--$(".wei").html("SL")-->
+            <!--});$(".chicun:eq(3)").click(function(){-->
+                <!--$(".wei").html("LL")-->
+            <!--});-->
+           <!--; $("#sele").change(function(){-->
+                <!--var L=$(this).val();-->
+               <!---->
+                <!--$(".zongji").html(L*200);-->
+            <!--});-->
+        <!--})-->
+    <!--</script>-->
+</head>
+<body>
+<div class="header-inner">
+<div class="header clearfix">
+    <div class="logo"><img src="images/logo.gif" alt=""></div>
+    <input type="" placeholder="请输入商品名称">
+    <ul id="skin">
+        <li id="skin_0" title="灰色" class="selected">灰色</li>
+        <li id="skin_1" title="紫色">紫色</li>
+        <li id="skin_2" title="红色">红色</li>
+        <li id="skin_3" title="天蓝色">天蓝色</li>
+        <li id="skin_4" title="橙色">橙色</li>
+        <li id="skin_5" title="淡禄色">淡禄色</li>
+    </ul>
+    <nav>
+        <ul class="clearfix">
+            <li class="li5">
+                <a href="#">首页</a>
+                <ul class="icon_bot">
+                    <li><a href="#">11111</a></li>
+                    <li><a href="#">11111</a></li>
+                    <li><a href="#">11111</a></li>
+                    <li><a href="#">11111</a></li>
+                    <li><a href="#">11111</a></li>
+                </ul>
+            </li>
+            <li class="li5">
+                <a href="#">品牌</a>
+                <ul class="icon_bot">
+                    <li><a href="#">22222</a></li>
+                    <li><a href="#">22222</a></li>
+                    <li><a href="#">22222</a></li>
+                    <li><a href="#">22222</a></li>
+                </ul>
+            </li>
+            <li class="li5"><a href="#">女装</a>
+                <ul class="icon_bot">
+                <li><a href="#">33333</a></li>
+                <li><a href="#">33333</a></li>
+                <li><a href="#">33333</a></li>
+                <li><a href="#">33333</a></li>
+
+            </ul>
+            </li>
+            <li class="li5"><a href="#">男装</a>
+                <ul class="icon_bot">
+                    <li><a href="#">44444</a></li>
+                    <li><a href="#">44444</a></li>
+                    <li><a href="#">44444</a></li>
+                    <li><a href="#">44444</a></li>
+                    <li><a href="#">44444</a></li>
+
+                </ul></li>
+            <li class="li5"><a href="#">鞋包配饰</a>
+                <ul class="icon_bot">
+                    <li><a href="#">55555</a></li>
+                    <li><a href="#">55555</a></li>
+                    <li><a href="#">55555</a></li>
+                    <li><a href="#">55555</a></li>
+                    <li><a href="#">55555</a></li>
+
+                </ul></li>
+        </ul>
+    </nav>
+</div>
+</div>
+<div class="main clearfix">
+    <div class="main-left">
+        <h2>商品分类</h2>
+        <div class="ml1">
+            <h3>推荐品牌</h3>
+            <ul>
+                <li class="li1">耐克</li>
+                <li class="li1 lir" style="color: red ">阿迪达斯</li>
+                <li class="li1">达芙妮</li>
+                <li class="li1">李宁</li>
+                <li class="li1">安踏</li>
+                <li class="li1">奥康</li>
+                <li class="li1 lir" style="color: red; background-position:31px 0;">骆驼</li>
+                <li class="li1">特步</li>
+            </ul>
+        </div>
+        <div class="ml2">
+            <h3>女装</h3>
+            <ul>
+                <li class="li1">呢大衣</li>
+                <li class="li1">T恤</li>
+                <li class="li1">羽绒</li>
+                <li class="li1">李宁</li>
+                <li class="li1">安踏</li>
+                <li class="li1">奥康</li>
+                <li class="li1">骆驼</li>
+                <li class="li1">特步</li>
+            </ul>
+        </div>
+        <div class="ml3">
+            <h3>男装</h3>
+            <ul>
+                <li class="li1">耐克</li>
+                <li class="li1">阿迪达斯</li>
+                <li class="li1">达芙妮</li>
+                <li class="li1">李宁</li>
+                <li class="li1">安踏</li>
+                <li class="li1">奥康</li>
+                <li class="li1">骆驼</li>
+                <li class="li1">特步</li>
+            </ul>
+        </div>
+        <div class="ml4">
+            <h3>鞋包配饰</h3>
+            <ul>
+                <li class="li1">耐克</li>
+                <li class="li1">阿迪达斯</li>
+                <li class="li1">达芙妮</li>
+                <li class="li1">李宁</li>
+                <li class="li1">安踏</li>
+                <li class="li1">奥康</li>
+                <li class="li1">骆驼</li>
+                <li class="li1">特步</li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-center">
+    	<div class="jqzoom">
+   	 		<img src="images/pro_img/blue_one_small.jpg" jqimg="images/pro_img/blue_one_big.jpg" alt="">
+		</div>
+		<div class="jqzoom2">
+   	 		<img src="images/look.gif" alt="">
+		</div>
+		<div class="mc1"><img src="images/pro_img/blue_one.jpg" alt=""></div>
+		<div class="mc2"><img src="images/pro_img/blue_three.jpg" alt=""></div>
+		<div class="mc3"><img src="images/pro_img/blue_two.jpg" alt=""></div>
+		<div class="mc4">
+			<a href="#" style="background-color:#6a86b6">产品属性</a>
+			<a href="#">产品尺码表</a>
+			<a href="#">产品介绍</a>
+			<span>
+				沿用风靡百年的经典全棉牛津纺面料，通过领先的液氨整理技术，使面料的抗皱性更上一层楼。延续简约、舒适、健康设计理念，特推出免烫、易打理的精细免烫牛津长袖衬衫系列。
+			</span>
+            <span style="display: none">
+				2沿用风靡百年的经典全棉牛津纺面料，通过领先的液氨整理技术，使面料的抗皱性更上一层楼。
+			</span>
+            <span style="display: none">
+				3沿用风靡百年的经典全棉牛津纺面料，
+			</span>
+		</div>
+	</div>
+    <div class="main-right">
+		<h4>免烫高支棉衬衫</h4>
+		<span class="box">全新精品100%新疆长绒棉织造成，平整度好，短绒少；80-100高支双股经纬交织，带来无与伦比的舒适享受；而且面料反光效果好，具有漂亮的光泽，质感上佳，有利于免烫效果的维持！</span>
+		<p>价&nbsp; &nbsp;格：<span class="gang">379.00</span>元</p>
+		<p>促&nbsp; &nbsp;销：<span>200.00</span>元</p>
+		<p>颜&nbsp; &nbsp;色：<span class="lanbai">蓝白</span></p>
+		<div class="tu">
+		<a href="#" class="lan"><img src="images/pro_img/blue.jpg" alt=""></a>
+		<a href="#" class="huang"><img src="images/pro_img/green.jpg" alt=""></a>
+		<a href="#" class="qing"><img src="images/pro_img/yellow.jpg" alt=""></a>
+		</div>
+		<p class="chi">尺&nbsp; &nbsp;寸：<span class="wei">未选择</span></p>
+		<a href="#" class="chicun">S</a>
+		<a href="#" class="chicun">L</a>
+		<a href="#" class="chicun">SL</a>
+		<a href="#" class="chicun">LL</a>
+		<p>数&nbsp; &nbsp;量：</p>
+		<select name="" id="sele">
+			<option value="1" class="op1">1</option>
+			<option value="2" class="op2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+		<p>总&nbsp; &nbsp;计：<span class="zongji">200</span></p>
+		<p>给商品评分：</p>
+		<ul id="xing">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+		<div class="che"><img src="images/btn_cart.png" alt=""></div>
+	</div>
+   </div>
+<div class="footer">
+    <p>Copyright@2009-2012JaenShop Inc</p>
+</div>
+</body>
+</html>

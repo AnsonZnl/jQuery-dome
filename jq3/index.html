@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq3</title>
+    <script src="jquery-1.11.1.js" type="text/javascript"></script>
+    <script>
+//        $(document).ready(function(){
+//            var a= $("ul li:eq(3)").text();//查找元素节点
+//            alert(a);
+//        })
+//        $(document).ready(function(){
+//            var a= $("ul li:eq(0)").attr("title");//元素节点.取元素的值改变值、
+//            alert(a);
+//        })
+//        $(document).ready(function(){
+//            var a= $("ul li:eq(0)").attr("title");//元素节点.取元素的值改变值、
+//           var li1=$("<li>777</li>");
+//            $("ul").append(li1);//追加到最后append
+//        })
+//        $(document).ready(function(){
+//             //var a= $("ul li:eq(0)").attr("title");//元素节点.取元素的值改变值、
+//             var a=$("<tr><td>d</td><td>d</td></tr>");
+//            $(lia).appendTo("<td>")//内部追加
+//             $("table").append(a);//追加到尾部append.创建用工厂函数.在jq中往HTML中创建节点.可以添加元素和文本
+//            $("table").prepend("<tr>")//追加在前面。追加在内部
+//            $("").after()//追加到后面外面
+//            $("").insertAfter()//追加后面到外面
+//            $("").before()//追加到前面外面
+            //append   追加结尾（内部）
+            //appendTo    追加到指定元素中（内部）
+            //prepend    追加前面（内部）
+            //prependTO   追加到指定元素前面（内部）
+            //after     追加结尾（外部）
+            //insertAfter   追加到指定元素之后（内部）
+            //before        p67
+            //insertBefore
+       // })
+//$(document).ready(function(){
+//          // var a= $("ul li:eq(0)").attr("title");//元素节点.取元素的值改变值、
+//           var li1=$("<li>777</li>");
+//           var li2=$("<li>777</li>");
+//            $("ul").append(li1);//追加到最后append
+//            $(li2).appendTo("ul");//追加到最后appendTO    ok
+//        })
+        //删除节点
+//        $(document).ready(function(){
+//            $("ul li").click(function(){
+//                $(this).css("background","red");//单击事件家背景.remove删去的事件不能用
+//            })
+//            var a=$("ul li:eq(0)").remove();//从网页中删除。
+//            $("ul").append(a);//然后把它追加到结尾
+//            var b= $("ul li:eq(0)").detach();//从网页中删除。
+//            $("ul").append(b);//单击事件家背景.detach删去的事件能用
+            //清空元素
+//            $("ul li:eq(0)").empty();//移除元素的文本。不如li,使用empty。只删文本不删点
+//        })
+        //复制节点
+        $(document).ready(function(){
+            var b1= $("ul li:eq(2)").clone(true);//复制.在clone后加true带复制的事件
+            $("ul").append(b1)//粘贴
+            $("ul li").click(function(){//单机事件
+                $(this).css("background","red");//单机加背景
+                $(this).clone(true).appendTo("ul");//复制节点并且追加到Ul的后面（外部）.并且加上true；使其带有复制元素中带有的事件（加背景）
+            })
+        })
+        //替换节点
+        $(document).ready(function() {
+           // $(".div1").replaceWith("<h1>hello wold</h1>")//使用h1替换div1。事件不可替换。无true
+            $("<h1>hollo wold</h1>").replaceAll(".div1")//使用h1替换div1。事件不可替换。无true.replacaAll。效果一样，和replaceWith前后颠倒
+        })
+        //包裹节点
+        $(document).ready(function(){
+            $("ul li").wrap("<p></p>")//分别单独包裹
+            //$("ul li").wrapAll("<p></p>")//将所有的匹配到的元素用一个元素来包裹
+            //$("ul li").wrapInner("<p></p>")//将所有的匹配的元素的子元素到用一个元素来包裹
+
+        })
+        //属性操作
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="div1">hello wold</div>
+<ul>
+    <li title="AAA">111</li>
+    <li>222</li>
+    <li>333</li>
+    <li>444</li>
+    <li>555</li>
+</ul>
+</body>
+</html>

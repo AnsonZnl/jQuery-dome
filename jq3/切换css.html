@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-1.11.1.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("h1,h2,p").toggleClass("blue");
+            });
+        });
+    </script>
+    <style>
+        .blue {
+            color:blue;
+        }
+
+        .high{
+            font-family: bold;
+            color: red;
+        }
+        .another{
+            font-style: italic;
+            color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <p class="myClass" title="选择你喜欢的水果">你最喜欢的水果是？</p>
+    <h1>标题 1</h1>
+    <h2>标题 2</h2>
+    <p>这是一个段落。</p>
+    <p>这是另一个段落。</p>
+    <button>切换 CSS 类</button>
+</body>
+<!--<script>-->
+    <!--$(function(){-->
+        <!--var p_class = $("p").attr("class");//获取p的class-->
+        <!--$("p").attr("class","high");//设置p元素的class为high-->
+        <!--$("p").addClass("another");//给p元素追加another类-->
+        <!--$("p").removeClass("high");//移出p元素中值为“high”的class-->
+        <!--//$("p").removeClass("high").removeClass("another");//移出p元素中值为“high”和another的class-->
+        <!--$("p").removeClass("high another");//可以使用空格来删除多个class-->
+        <!--$("p").removeClass();//移出p元素中所有的class-->
+        <!--$("p").toggleClass("another");//重复切换类名.“another”class-->
+<!--//        $toggleBth.toggle(function(){//toggle()  交替一组动作-->
+<!--//            $("p").addClass("another");-->
+<!--//        }-->
+<!--//        )-->
+    <!--})-->
+
+<!--</script>-->
+</html>

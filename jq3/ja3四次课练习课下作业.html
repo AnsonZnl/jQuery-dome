@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq第三章第四次课课下练习作业</title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function(){
+           $("a").click(function(){
+               var l=  $("ul:eq(0)").clone(true).html("<li><input type=‘text' value='大缺吃屎'/><a href='#' class='shou1'>-</a></li>");
+               $("ul:eq(0)").append(l);//粘贴
+           });
+            $("ul").live("click",function(){
+                $(this).slideToggle();
+            });
+        });
+    </script>
+    <style>
+        body{
+            background: skyblue;
+            position: relative;
+        }
+        input{
+            width: 200px;
+            height: 50px;
+            margin: 0 auto;
+            position: relative;
+            left: 600px;
+        }
+        a{
+            left: 600px;
+            top:7px;
+            display: inline-block;
+            width: 55px;
+            line-height: 55px;
+            background: cornflowerblue;
+            text-align: center;
+            text-decoration: none;
+            color: aliceblue;
+            font-size: 35px;
+            position: relative;
+        }
+        ul{
+            list-style: none;
+            width: 360px;
+        }
+        .shou1{
+            display: inline-block;
+            background: #561;
+            
+        }
+        .shou{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<input type="text" value="大缺吃屎"/>
+<a href= "#">+</a>
+<ul></ul>
+</body>
+<script>
+
+</script>

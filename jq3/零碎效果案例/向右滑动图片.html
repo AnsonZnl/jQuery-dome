@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.11.1.js" type="text/javascript"></script>
+    <script>
+        $(function(){
+            $(".div1").mouseenter(function(){   
+                 $(".div2").stop().animate({"margin-left":"0px"},2000)
+          })
+            $(".div1").mouseleave(function(){
+                $(".div2").stop().animate({"margin-left":"-250px"},2000)
+            })
+            $(".div2").mouseenter(function(){
+                $(".div3").stop().animate({"margin-left":"0px"},2000)
+            })
+            $(".div2").mouseleave(function(){
+                $(".div3").stop().animate({"margin-left":"-250px"},2000)
+            })
+            $(".div3").mouseenter(function(){
+                $(".div4").stop().animate({"margin-left":"0px"},2000)
+            })
+            $(".div3").mouseleave(function(){
+                $(".div4").stop().animate({"margin-left":"-250px"},2000)
+            })
+            $(".div4").mouseenter(function(){
+                $(".div5").stop().animate({"margin-left":"0px"},2000)
+            })
+            $(".div4").mouseleave(function(){
+                $(".div5").stop().animate({"margin-left":"-250px"},2000)
+            })
+        })
+    </script>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        div{
+            float: left;
+            width: 320px;
+            height: 200px;
+        }
+        .div2,.div3,.div4,.div5{
+           margin-left: -250px;
+        }
+        .diva{
+            width: 800px;
+            height: 200px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div class="diva">
+<div class="div1"><img src="images/abstract.jpg" alt=""></div>
+<div class="div2"><img src="images/urban.jpg" alt=""></div>
+<div class="div3"><img src="images/people.jpg" alt=""></div>
+<div class="div4"><img src="images/nature.jpg" alt=""></div>
+<div class="div5"><img src="images/landscapes.jpg" alt=""></div>
+</div>
+</body>
+</html>

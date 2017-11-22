@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq第一节课</title>
+    <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script>
+        //文档（document）.准备执行操作(ready)
+//        $(document).ready(function(){
+//                          $("h1").css("color","red");//使用css选择器就行
+//                          })
+//         $(document).ready(function(){
+//             $(".dia").click(function(){
+//                 $(".pic").attr("src","images/maldives_2.jpg")
+//             })
+//             $(".dib").click(function(){
+//                 $(".pic").attr("src","images/maldives_3.jpg")
+//             })
+//              $(".dic").click(function(){
+//                 $(".pic").attr("src","images/maldives_4.jpg")
+//             })
+//               $(".did").click(function(){
+//                 $(".pic").attr("src","images/maldives_1.jpg")
+//             })
+//         }
+//        )
+        $(document).ready(function(){
+             $(".img1").click(function(){
+                 $(".imga").attr("src","images/gracetan_02.jpg")
+             })
+             $(".img2").click(function(){
+                 $(".imga").attr("src","images/gracetan_03.jpg")
+             })
+              $(".img3").click(function(){
+                 $(".imga").attr("src","images/gracetan_04.jpg")
+             })
+               $(".img4").click(function(){
+                 $(".imga").attr("src","images/gracetan_05.jpg")
+             })
+               $(".img5").click(function(){
+                 $(".imga").attr("src","images/gracetan_01.jpg")
+             })
+         }
+        )
+    </script>
+    <style>
+/*
+        .div1 img{
+            width: 600px;
+            height: 400px;
+        }
+        .div{
+            margin: 0 auto;
+            width: 600px;3
+        }
+        .d1,.d2,.d3,.d4{
+            float: left;
+            width: 50px;
+            height: 50px;
+             padding-right: 10px;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+           
+        }
+        */         body{
+            position: relative;
+        }
+        .div1{
+            width: 671px;
+            height: 327px;
+        }
+        nav{
+            position: absolute;
+             top: 277px;
+             left: 496px;
+        }
+        nav ul li{
+            display:inline-block;
+            float: left;
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            background: #eeeeee;
+            margin-right: 3px;
+            text-align: center;
+            cursor: pointer;
+            
+        }
+        a{
+            text-decoration: none;
+        }
+        li:hover{
+            color: #000;
+            background: #141bac;
+          
+        }
+    </style>
+</head>
+<body>
+<!--
+   <h1>这是标题文字</h1>
+    <div class="div1"><img src="images/maldives_2.jpg" alt="这是一张图片" class="pic"></div>
+    <div class="div2">
+        <div class="d1"><img src="images/maldives_1.jpg" alt="这是一张图片" class="dia"></div>
+        <div class="d2"><img src="images/maldives_2.jpg" alt="这是一张图片" class="dib"></div>
+        <div class="d3"><img src="images/maldives_3.jpg" alt="这是一张图片" class="dic"></div>
+        <div class="d4"><img src="images/maldives_4.jpg" alt="这是一张图片" class="did"></div>
+    </div>
+-->
+    <div class="div1">
+        <img src="images/gracetan_01.jpg" alt="" class="imga">
+    </div>
+    <nav>
+        <ul>
+            <li class="img1"><a href="#">1</a></li>
+            <li class="img2"><a href="#">2</a></li>
+            <li class="img3"><a href="#">3</a></li>
+            <li class="img4"><a href="#">4</a></li>
+            <li class="img5"><a href="#">5</a></li>
+        </ul>
+    </nav>
+</body>
+<!--
+     <script>
+        $("h1").css("color","red");//放下面可以不用加     $(document).ready(function(){               
+    </script>
+-->
+</html>

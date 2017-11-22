@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>延迟加载</title>
+    <script src="../jquery-1.11.1.js"></script>
+    <script src="jquery.lazyload.js"></script>
+    <script>
+       $(function(){
+           $("img.lazyload").lazyload({
+               effect:"fadeIn"
+           })
+       }) 
+    </script>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <img data-original="images/1a.jpg" src="images/1a.jpg" class="lazyload" alt="">
+    <img data-original="images/2a.jpg" src="images/2a.jpg" class="lazyload" alt="">
+    <img data-original="images/3a.jpg" src="images/3a.jpg" class="lazyload" alt="">
+    <img data-original="images/4a.jpg" src="images/4a.jpg" class="lazyload" alt="">
+    <img data-original="images/5a.jpg" src="images/5a.jpg" class="lazyload" alt="">
+   
+</body>
+</html>

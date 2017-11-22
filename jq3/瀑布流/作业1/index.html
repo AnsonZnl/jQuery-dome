@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业一</title>
+    <script src="jquery-1.11.1.js"></script>
+    <style>
+        /*--通用样式--*/
+body,ul,li,p,h1,h2,h3{
+	margin: 0px;
+	padding: 0px;
+	font-family: arial;
+}
+.clearfix:before,
+.clearfix:after{
+	content: " ";
+	display: table;
+	clear: both;
+}
+.header,.banner{
+	margin:0 auto;
+	/*width: 67.597208%;*/
+	width: 1345px;
+	overflow: hidden;
+}
+        .main,.footer{
+            margin:0 auto;
+	/*width: 67.597208%;*/
+	width: 1090px;
+	overflow: hidden;
+            margin-top: 30px;
+        }
+    
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+h1{
+	display: none;
+}
+#warper{
+	width: 100%;
+	overflow: hidden;
+    position: relative;
+}
+/*--通用样式--*/
+/*--header样式--*/
+        .header{
+            margin-top: 5px;
+             border:1px solid #d0d0d0;
+            border-radius: 5px; 
+            
+        }
+        .pic2{
+            position: absolute;
+            z-index: 1;
+            left: 1126px;
+            display: none;
+        }
+        nav{
+            width: 400px;
+           margin-top: 50px;
+            margin-left: 100px;
+            overflow: hidden;
+            float: left;
+        }
+		nav ul li {	list-style: none;
+					float: left;
+                    width:72px;
+			}
+		nav ul li a{
+            text-align: center;
+					text-decoration: none;
+					display:block;
+					line-height:36px;
+					font-size:14px;
+					color: #000;
+		}
+        ul{
+            height: 36px;
+            overflow: hidden;
+        }
+        .logo{
+            width: 155px;
+            float: left;
+            margin-left: 7px;
+            margin-top: 10px;
+        }
+        .pic{
+            float: right;
+        }
+        span{
+           text-align: center;
+            text-decoration: none;
+            display:block;
+            line-height:36px;
+            font-size:14px;
+            color: #fff; 
+            cursor: pointer;
+            border-radius: 5px; 
+            background: #000;
+        }
+/*--header样式--*/
+        .banner{
+           height: 525px;
+        }
+        .banner img{
+            display: none;
+             position: absolute;    
+
+          
+        }
+/*--bnner样式--*/
+/*--bnner样式--*/
+        h2{
+            font-size: 20px;
+            line-height: 50px;
+            text-align: center;
+            color: dimgrey;
+        }
+/*--main样式--*/
+        .img1{
+            float: left;
+            overflow: hidden;
+            width: 269px;
+            height: 342px;
+        }
+        .imga{
+            z-index: 2;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 269px;
+            height: 346px;
+            background: #000;
+            opacity: 0.5;
+            filter:alpha(opacity=80);
+        }
+
+/*--main样式--*/
+        .footer-left{
+            width: 538px;
+            margin-right: 20px;
+            float: left;
+            position: relative;
+        }
+        .footer-right{
+            overflow: hidden;
+           width: 520px;
+            
+        }
+        .fl{
+            width: 538px;
+            height: 458px;
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background: #000000;
+        }
+        .main img{
+            width: 269px;
+            height: 342px;
+        }
+/*--footer样式--*/
+        .fr1,.fr2,.fr3,.fr4{
+            width: 250px;
+            float: left;
+            height: 206px;
+            overflow: hidden;
+            position: relative;
+        }
+        .footer-right{
+            height: 458px;
+            position: relative;
+        }
+        .as{
+            width: 249px;
+            height: 206px;
+            display: block;
+            top: 0;
+            left: 0;
+            background: #000;
+            opacity:0;
+            /*display: none;*/
+            position: absolute;
+        }
+        .footer-right li{
+            width: 249px;
+            float: left;
+            height: 206px;
+            float: left;
+            position: relative;
+        }
+        .fr1{
+            margin: 0 20px 20px 0;
+        }
+        .fr3{
+            margin:0px 20px 20px 0px;
+        }
+/*--footer样式--*/
+    </style>
+    <script>
+        $(function() {
+            $("li a").hover(function () {//hover合成事件hover（a移除，b移出）
+                $(this).stop().animate({"margin-top": "-36px"}, 500)
+            }, (function () {
+                $(this).stop().animate({"margin-top": "0px"}, 500)
+            }))
+            $(".pic").hover(function () {
+                $(".pic2").show();
+            }, function () {
+            })
+            $(".pic2").hover(function () {
+            }, function () {
+                $(".pic2").hide();
+            })
+            var n = 0;//变量
+            function run() {
+                n++;
+                n = (n == 3) ? 0 : n;
+                $(".banner img").eq(n).fadeIn(1000).siblings("img").fadeOut(1000); //fadeIn显示，fadeOut隐藏
+            }
+
+            var timer = setInterval(run, 3000);
+            $(".footer-left").hover(function(){
+                $(".fl").animate({"opacity":"0.5"},1000)
+            },function(){
+                $(".fl").animate({"opacity":"0"},1000)
+            })
+            $(".footer-right li").hover(function(){
+                $(this).find(".as").stop().animate({"opacity":"0.5"},1000)
+            },function(){
+                $(this).find(".as").stop().animate({"opacity":"0"},1000)
+            })
+            $(".img1").hover(function(){
+                $(this).find(".imga").stop().animate({"margin-top":"-349px"},600)
+            },function(){
+                $(this).find(".imga").stop().animate({"margin-top":"0"},600)
+            })
+        })
+
+    </script>
+</head>
+<body>
+   <div id="warper">
+       <div class="header">
+          <div class="pic2"><img src="images/pic2_01.gif" alt=""></div>
+           <nav>
+               <ul>
+                   <li><a href="#">定制</a><span>定制</span></li>
+                   <li><a href="#">市集</a><span>市集</span></li>
+                   <li><a href="#">新品</a><span>新品</span></li>
+                   <li><a href="#">热卖</a><span>热卖</span></li>
+                   <li><a href="#">闪购</a><span>闪购</span></li>
+               </ul>
+           </nav>
+           <div class="logo">
+               <img src="images/images/logo_03.gif" alt="">
+           </div>
+           <div class="pic">
+               <img src="images/images/%E6%95%88%E6%9E%9C%E5%9B%BE_03.gif" alt="">
+           </div>
+       </div>
+       <div class="banner">
+           <img src="images/images/walle.jpg" alt="" style="display:block">
+           <img src="images/images/up.jpg" alt="">
+           <img src="images/images/toystory.jpg" alt="">
+       </div>
+       <div class="main">
+           <h2>当日精选</h2>
+               <div class="img1">
+                   <img src="images/images/pc1_03.gif" alt="">
+                   <a href="#"  class="imga"></a>
+               </div>
+               <div class="img1">
+                   <img src="images/images/pc2_03.gif" alt="">
+                   <a href="#" class="imga"></a>
+               </div>
+               <div class="img1">
+                   <img src="images/images/pc3_03.gif" alt="">
+                   <a href="#" class="imga"></a>
+               </div>
+               <div class="img1">
+                   <img src="images/images/pc4_03.gif" alt="">
+                   <a href="#" class="imga"></a>
+               </div>
+            </div>
+       <div class="footer">
+            <h2>创意画报</h2>
+            <div class="footer-left">
+                <img src="images/images/pc9_03.gif" alt="">
+                <div class="fl"></div>
+            </div>
+
+            <ul class="footer-right clearfix">
+                <li class="fr1"><img src="images/images/pc5_03.gif" alt=""><a class="as" href="#"></a></li>
+                <li class="fr2"><img src="images/images/pc6_03.gif" alt=""><a class="as" href="#"></a></li>
+                <li class="fr3"><img src="images/images/pc7_03.gif" alt=""><a class="as" href="#"></a></li>
+                <li class="fr4"><img src="images/images/pc8_03.gif" alt=""><a class="as" href="#"></a></li>
+            </ul>
+       </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-1.11.1.js" type="text/javascript"></script>
+    <script>
+        $(function(){
+            $("#right").click(function(){
+                $(".list").animate({"margin-left":"-900px"},1000,function(){
+                    $(".list li:first").appendTo(".list");
+                    //找到第一张追加到最后
+                    $(".list").css({"margin-left": 0});
+                })
+            })
+            $("#left").click(function(){
+                $(".list li:last").prependTo(".list");
+                //追加最后一张到第一个
+                $(".list").css({"margin-left":"-900px"});
+                $(".list").stop().animate({"margin-left": 0},1000);
+            })
+        });
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #banner{
+            border: 2px solid #000;
+            width: 900px;
+            height: 400px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+
+        }
+        ul{
+            list-style: none;
+            width: 9000px;
+            height: 400px;
+
+        }
+        ul li{
+            float: left;
+
+
+        }
+        img{
+            width: 900px;
+            height: 510px;
+            float: left;
+        }
+        #left,#right{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border: 1px solid #000;
+            cursor:pointer;
+            display: block;
+           color: #000000;
+            background-color: darkgray;
+            opacity: 0.5;
+        }
+        #left{
+            top: 180px;
+            left:0px;
+        }
+        #right{
+            top: 180px;
+            left:860px;
+        }
+    </style>
+</head>
+<body>
+    <div id="banner">
+            <ul class="list">
+                <li><img src="images/libai.jpg" alt=""></li>
+                <li><img src="images/20160913044812349.jpg" alt=""></li>
+                <li><img src="images/20165513113229310.jpg" alt=""></li>
+                <li><img src="images/20170122105807774.jpg" alt=""></li>
+                <li><img src="images/pfbz-bg.jpg" alt=""></li>
+                <li><img src="images/gonggui.jpg" alt=""></li>
+                <li><img src="images/hanxin.jpg" alt=""></li>
+                <li><img src="images/20160910041102586.jpg" alt=""></li>
+                <li><img src="images/wangzherongyao091.jpg" alt=""></li>
+                <li><img src="images/lanling.jpg" alt=""></li>
+            </ul>
+            <div id="left">&lt;</div>
+            <div id="right">&gt;</div>
+    </div>
+</body>
+</html>

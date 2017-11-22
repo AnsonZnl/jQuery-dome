@@ -1,0 +1,112 @@
+/*---通用样式---*/
+body,p,ul,li,h1,h2,h3,h4,h5,h6,span{
+	padding:0px;
+	margin:0px;
+}
+.clearfix:before,
+.clearfix:after{
+	content:"";
+	display: table;
+	clear:both;
+}
+.left{
+	float: left;
+}
+a{
+	text-decoration: none;
+}
+ul li{
+	list-style: none;
+}
+.header,.containt,.footer{
+	width:1203px;
+	margin:0 auto;
+}
+/*---通用样式---*/
+/*---header样式---*/
+.header-inner{
+	background:#d60000;
+	border-bottom:1px solid #798498;
+}
+.header{
+	height:49px;
+}
+.nav>li,.lenglu li{
+	font-size: 14px;
+	line-height: 50px;
+	float: left;
+}
+.lenglu{
+	color:#FFF;
+	float:right;
+}
+a{
+	color:#fff;
+	text-decoration: none;
+}
+.nav>li{
+	position: relative;
+}
+.nav li{
+	text-align: center;
+	width:100px;
+}
+.erji{
+	background:#d60000;
+	position: absolute;
+	left:0px;
+	top:49px;
+	z-index: 99999;
+	display: none;
+}
+.erji li{
+	color:#FFF;
+	height:50px;
+}
+/*---header样式---*/
+/*---banner样式---*/
+.banner{
+	width:1349px;
+	height:313px;
+	overflow: hidden;
+}
+.banner ul{
+	width:4047px;
+}
+.banner li{
+	width:1349px;
+	height:313px;
+	float: left;
+}
+.banner li img{
+	width:100%;
+}
+/*---banner样式---*/
+.shouchang{
+	position:fixed;
+	top:310px;
+	right:0px;
+}
+.shouchang div{
+	width:70px;
+	text-align:center;
+	height:35px;
+	background-color:#d60000;
+	color:#FFF;
+	line-height: 35px;
+	font-size: 12px;
+	position: absolute;
+	top:0px;
+	left:-70px;
+	opacity: 0;
+	transition:0.5s;
+}
+.shouchang:hover div{
+	opacity: 1;
+}
+.TOP{
+	position: fixed;
+	top:360px;
+	right:-3px;
+	display: none;
+}

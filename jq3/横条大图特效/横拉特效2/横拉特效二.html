@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+   <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function(){
+            $(".banner_1,.banner_2,.banner_3,.banner_4").mouseenter(function(){
+            $(this).stop().animate({"padding-right":"390px"},1000).siblings("li").css("opacity","0.5");
+            }).mouseleave(function(){
+            $(this).stop().animate({"padding-right":"0px"},1000).siblings("li").css("opacity","1");
+            });
+            $(".banner_6").mouseenter(function(){    $(this).css("width","575px").stop().animate({"margin-left":"-390px"},1000).siblings("li").css("opacity","0.5");}).mouseleave(function(){
+            $(this).stop().animate({"margin-left":"10px"},1000).siblings("li").css("opacity","1");
+            });
+            $(".banner_5").stop().mouseenter(function(){
+            $(this).css("width","575px").stop().animate({"margin-left":"-185px"},1000).siblings("li").css("opacity","0.5");
+            $(".banner-5 img").stop().animate({"margin-left":"0px"},1000)
+            }).mouseleave(function(){
+            $(this).stop().animate({"margin-left":"10px"},1000).css("width","185px").siblings("li").css("opacity","1");
+            });
+            
+        })
+        
+    </script>
+    <style>
+       
+        /*1170*/
+       
+        *{padding: 0;margin: 0;}
+        .out_banner{width:1160px;height:125px;overflow: hidden;margin: 20px auto;}
+        .hlbanner{width:3500px;height:125px;list-style: none;}
+        .hlbanner li{float:left;width:185px;height:125px;overflow: hidden;
+            border-radius: 8px;
+        position: relative;}
+        .hlbanner .banner_2,.hlbanner .banner_3,.hlbanner .banner_4,.hlbanner .banner_5,
+        .hlbanner .banner_6
+        {margin-left: 10px;}
+        .hlbanner .big{position: absolute;left:0;top:0;
+            
+        }
+        .hlbanner .center{width:575px;height:125px;background-color: #000000;opacity: 0;
+                  position: absolute;left:0px;top: 0;}
+    </style>
+</head>
+<body>
+<div class="out_banner">
+<ul class="hlbanner">
+    <li class="banner_1">
+        <a href="#"><img src="images/big_1.gif" alt="" class="big"/></a>
+        <div class="center"></div>
+    </li>
+    <li class="banner_2">
+        <img src="images/big_2.gif" alt="" class="big"/>
+        <div class="center"></div>
+    </li>
+    <li class="banner_3">
+        <img src="images/big_3.gif" alt="" class="big"/>
+        <div class="center"></div>
+
+    </li>
+    <li class="banner_4">
+        <img src="images/big_4.gif" alt="" class="big"/>
+        <div class="center"></div>
+
+    </li>
+    <li class="banner_5">
+        <img src="images/big_5.gif" alt="" class="big"/>
+        <div class="center"></div>
+
+    </li>
+    <li class="banner_6">
+        <img src="images/big_6.gif" alt="" class="big"/>
+        <div class="center"></div>
+
+    </li>
+</ul>
+</div>
+</body>
+</html>

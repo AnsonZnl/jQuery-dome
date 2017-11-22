@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function(){
+            $(window).scroll(function(){//
+                if ($(window).scrollTop()>100){//当高度小于100
+                    $("#back-to-top").fadeIn(1000);
+                }else{
+                    $("#back-to-top").fadeOut(1000);
+                }
+            })
+            $("#back-to-top").click(function(){
+                $("body").animate({"scrollTop":"0"},1500)
+            })
+        })
+    </script>
+    <style>
+        img{
+            border: 0;
+        }
+        #main{
+            height: 2313px;
+            width: 1100px;
+            background-image: url(index.jpg);
+            margin: 0 auto; 
+        }
+        p#back-to-top{
+            position: fixed;
+            display: none;
+            bottom: 100px;
+            right: 80px;
+            width: 58px;
+            height: 55px;
+        }
+        p#back-to-top a{
+            text-align: center;
+            text-decoration: none;
+            color: #d1d1d1;
+            display: block;
+            width: 64px;
+        }
+        p#back-to-top a:hover{
+            color: #979797;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <p id="back-to-top">
+            <a href="#top">
+                <img src="pic.png" alt="">
+            </a>
+        </p>
+    </div>
+</body>
+</html>

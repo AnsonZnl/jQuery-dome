@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .nav{
+        width: 100%;  
+    }
+    .daohang{
+        width: 1345px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .dao1{
+        float: left;
+       margin-top:40px;
+    }
+    .daohang ul li{
+        list-style: none;
+        float: left;
+       
+        height: 40px;
+        overflow: hidden;
+        
+    }
+    .daohang ul li a{
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        display: block;
+        line-height: 40px;
+         background-color: azure;
+         padding: 0 20px;
+    }
+    .daohang ul li span{
+        display: block;
+        color: black;
+        line-height: 40px;
+        padding: 0 20px;
+    }
+    .tu{
+        float: left;
+        margin-left: 250px;
+    }
+    .tu1{
+        
+        float: right;
+    }
+    .banner{
+        margin: 0 auto;
+        width: 1345px;
+        position: relative;
+        overflow: hidden;
+        height: 525px;
+    }
+    .wrap{
+        position: absolute;
+        width: 4040px;
+    }
+    .wrap img{
+        display:inline;
+        float: left;
+    }
+    .banner1{
+        width: 1345px;
+        margin: 0 auto;
+    }
+    .banner1 h1{
+        color: #8d8c8c;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .banner1 ul{
+        list-style: none;
+        width:1200px;
+        margin: 0 auto;
+        
+    }
+    .banner1 ul li{
+        float: left;
+        margin: 20px;
+       position: relative;
+    }
+    .banner1 ul li a{
+        display: block;
+        text-decoration: none;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+   	    left: 0;
+        width: 249px;
+        height: 325px;
+        background-color: black;
+    }
+    .banner2 ul li a{
+        display: block;
+        text-decoration: none;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+   	    left: 0;
+        width: 538px;
+        height: 458px;
+        background-color: black;
+    }
+    .banner2 ul li .f2{
+        display: block;
+        text-decoration: none;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+   	    left: 0;
+        width: 249px;
+        height: 206px;
+        background-color: black;
+    }
+    .banner2{
+        width: 1345px;
+        margin: 0 auto;
+    }
+    .banner2 h1{
+         color: #8d8c8c;
+        margin-top: 20px;
+        text-align: center;
+        clear: both;
+    }
+    .banner2 ul{
+        list-style: none;
+        width:1200px;
+        margin: 0 auto;
+    }
+    .banner2 ul li{
+        float: left;
+        margin: 20px;
+         position: relative;
+    }
+    .tu2{
+        position: absolute;
+        right: 0;
+        z-index: 2;
+        display: none;
+    }
+    .tu3{
+        position: absolute;
+        right: 0;
+        z-index: 2;
+        display: none;
+    
+    }
+    </style>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+        $(function(){
+             $("li span").hover(function(){
+                   $(this).stop().animate({"margin-top":"-40px"},500);
+              },function(){
+                  $(this).stop().animate({"margin-top":0},500); 
+              })
+        })
+         $(function(){
+           var n=0;
+            function run(){
+                if(n==2){
+                    $(".wrap").animate({"left":0},1000);
+                    n=0;
+                }else{
+                    $(".wrap").animate({"left":"-="+"1345px"},1000);
+                    n++;
+                     }
+            }
+        c
+         $(function(){
+             $(".banner2 .f1").hover(function(){
+                 $(this).find("a").stop().animate({"opacity":0.5},500);
+             },function(){
+                  $(this).find("a").stop().animate({"opacity":0},500);
+             })
+             $(".banner2 .f3").hover(function(){
+                 $(this).find(".f2").stop().animate({"opacity":0.5},500);
+             },function(){
+                  $(this).find(".f2").stop().animate({"opacity":0},500);
+             })
+         })
+         $(function(){
+             $(".tu1").hover(function(){
+                 $(".tu2").show();
+                 $(".tu3").show();
+             },function(){
+                 $(".tu2").hide();
+                 $(".tu3").hide();
+             })
+             })
+         $(function(){
+             $(".banner1 li").hover(function(){
+                 $(this).find("a").stop().slideDown(1000).css({"opacity":0.5});
+             },function(){
+                 $(this).find("a").stop().slideUp(500).css({"opacity":0.5});
+             })
+         })
+    </script>
+<body>
+    <div class="nav">
+        <div class="daohang">
+           <div class="dao1">
+            <ul>
+                <li>
+                   <span>定制</span>
+                    <a href="#">定制</a>
+                </li>
+                <li>
+                   <span>市集</span>
+                    <a href="#">市集</a>
+                </li>
+                <li>
+                   <span>新品</span>
+                    <a href="#">新品</a>
+                </li>
+                <li>
+                   <span>热卖</span>
+                    <a href="#">热卖</a>
+                    </li>
+                <li>
+                   <span>闪购</span>
+                    <a href="#">闪购</a>
+                </li>
+            </ul>
+            </div>
+            <div class="tu"><img src="images/logo_03.gif" alt=""></div>
+            <div class="tu1"><img src="images/效果图_03.gif" alt=""></div>
+            <div class="tu2"><img src="images/subscribe.png" alt=""></div>
+            <div class="tu3"><img src="images/page_flip.png" alt=""></div>
+        </div>
+    </div>
+    <div class="banner">
+       <div class="wrap">
+            <img src="images/toystory.jpg" alt="">
+            <img src="images/up.jpg" alt="">
+            <img src="images/walle.jpg" alt="">
+        </div>
+    </div>
+    <div class="banner1">
+        <h1>当日精选</h1>
+        <ul>
+            <li><img src="images/pc1_03.gif" alt=""><a href="#">1</a></li>
+            <li><img src="images/pc2_03.gif" alt=""><a href="#">1</a></li>
+            <li><img src="images/pc3_03.gif" alt=""><a href="#">1</a></li>
+            <li><img src="images/pc4_03.gif" alt=""><a href="#">1</a></li>
+        </ul>
+    </div>
+     <div class="banner2">
+        <h1>创意画报</h1>
+        <ul>
+            <li class="f1"><img src="images/pc9_03.gif" alt=""><a href="#">1</a></li>
+            <li class="f3"><img src="images/pc5_03.gif" alt=""><a href="#" class="f2">1</a></li>
+            <li class="f3"><img src="images/pc6_03.gif" alt="" ><a href="#" class="f2">1</a></li>
+            <li class="f3"><img src="images/pc7_03.gif" alt=""><a href="#" class="f2">1</a></li>
+            <li class="f3"><img src="images/pc8_03.gif" alt=""><a href="#" class="f2">1</a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ja3章第五次课案例</title>
+       <script src="jquery-1.11.1.js" type="text/javascript"></script>
+    <script>
+        $(function(){
+            $(".add").click(function(){
+                var boxval= $(".box").val();
+               var newLi = $("<li>" + boxval + "<a href='#'>DEF</a></li>");
+                $(".list").append(newLi);
+            })
+            $("body").on("click",".list li a",function(){
+                //$(this).parent().remove();
+                $(this).parent().animate({"margin-left":"100px"},3000)
+                .animate({"margin-left":"-800px"},4000,function(){
+                    $(this).fadeOut(2000);//渐渐消失
+                })
+                
+                
+                //(this).remove();//立刻消失
+//                $(this).parent().animate({"margin-top":"100px"},3000);
+//                $(this).parent().animate({"padding-bottom":"100px"},3000);
+//                $(this).parent().animate({"padding-right":"100px"},3000);
+//                $(this).parent().animate({"border-radius:":"100px"},3000);
+            });
+            //$("li:eq(0)").fadeOut({"margin-left":"100px"},1000)   
+            //$("li:eq(0)").animate({"margin-left":"100px"},1000)   
+        });
+    </script>
+    <style>
+        body{
+            background: skyblue;
+           
+        }
+        #main{
+            width: 400px;
+            margin: 20px auto;
+               
+        }
+        .box{
+            width: 340px;
+            height: 50px;
+            border: 0;
+            background: lemonchiffon;
+            float: left;
+            padding: 0;
+            color: #000;
+            padding-left: 10px;
+            
+        }
+        .add{
+            width: 50px;
+            height: 50px;
+            background: #881;
+            border: 0;
+            color: aliceblue;
+            
+        }
+        .list{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            
+        }
+        .list li{
+            width: 400px;
+            height: 50px;
+            background: #fff;
+            margin-top: 10px;
+        }
+        .list li a{
+            color: gray;
+            font-size: 18px;
+            float: right;
+            line-height: 50px;
+            text-align: center;
+            padding-right: 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <input type="text" class="box">
+        <input type="button" class="add" value="ADD">
+        <ul class="list">
+            <li><a href="#">DEF</a></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>

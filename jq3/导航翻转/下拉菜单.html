@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉菜单</title>
+    <script src="jquery-1.11.1.js" type="text/javascript"></script>
+    <script>
+        $(function(){
+//            $(".a1").mouseenter(function(){
+//                $("div>ul>.li1").animate({"height":"250px"},1000);
+//            })
+//            $(".a1").mouseleave(function(){
+//                $("div>ul>.li1").animate({"height":"40px"},1000);
+//            })
+
+//                $(".a1").click(function() {
+//                    $(".ul1").slideToggle("slow");
+//                })
+                $(".a1").click(function() {
+                    $(".ul1").slideToggle("slow");
+                })
+        })
+    </script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 900px;
+            height: 280px;
+            margin: 0 auto;
+        }
+        div>ul>li{
+            list-style: none;
+            float: left;
+            margin: 20px 30px;
+            width: 120px;
+            height: 40px;
+            /*overflow: hidden;*/
+        }
+        div>ul{
+            clear: both;
+            width: 600px;
+            margin: 0 auto;
+            height: 280px;
+        }
+        div>ul>li>a{
+           text-decoration: none;
+            color: #2B93D2;
+            display: block;
+            width: 120px;
+            background: #333333;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 5px;
+            /*overflow: hidden;*/
+        }
+        div>ul>li>ul>li{
+            list-style: none;
+            text-align: center;
+            background: #2B93D2;
+            cursor: pointer;
+            border-top: slateblue 1px solid;
+            line-height: 30px;
+        }
+        .ul1{
+           display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li class="li1">
+                <a href="#" class="a1">坦克</a>
+                <ul class="ul1">
+                    <li>程咬金</li>
+                    <li>项羽</li>
+                    <li>夏侯惇</li>
+                    <li>张飞</li>
+                    <li>钟无艳</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">刺客</a>
+                <ul>
+                    <li>李白</li>
+                    <li>荆轲</li>
+                    <li>兰陵王</li>
+                    <li>猴子</li>
+                    <li>宫本武藏</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">法师</a>
+                <ul>
+                    <li>貂蝉</li>
+                    <li>露娜</li>
+                    <li>张良</li>
+                    <li>小乔</li>
+                    <li>诸葛亮</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

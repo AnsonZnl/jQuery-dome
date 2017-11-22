@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <script src="../jquery-1.11.1.js" type="text/javascript"></script>
+    <script>
+        $(function(){
+            $(".one").hover(function(){
+                $(this).animate({"height":"360px"},1000)
+            },function(){
+                $(this).animate({"height":"275px"},1000)
+            })
+            $(".two").hover(function(){
+                $(this).animate({"z-index":1000},100)
+                $(this).animate({"top":"190px","height":"360px"},700)
+            },function(){
+                $(this).animate({"top":"275px","height":"275px"},700)
+                $(this).animate({"z-index":1})
+            });
+        })
+    </script>
+	<style type="text/css">
+      
+      *{margin: 0;padding:0;}
+      .p{
+          height: 360px;
+          z-index: 10000;
+      }
+      #picbox{
+
+      	width: 350px;
+      	height:550px;
+      	border: 1px gray solid;
+        position: relative;
+
+      }
+
+      .one,.two{
+
+      	width: 350px;
+      	height: 275px;
+      	overflow: hidden;
+      	position: absolute;
+      	border: 1px solid #fff;
+      }
+     
+       .one{
+         
+           top:0;
+           z-index: 999;
+       }
+   
+     .two{
+    
+        top:275px;
+        z-index: 1;
+     }
+   
+	</style>
+</head>
+<body>
+ <div id="picbox">
+   <div class="one">
+     	<img src="image/one1 (1).jpg">
+     </div>
+<div class="two">
+     	<img src="image/one1 (2).jpg">
+     </div>
+  </div>
+</body>
+</html>
